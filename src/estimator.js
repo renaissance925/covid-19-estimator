@@ -1,19 +1,21 @@
 const covid19ImpactEstimator = (data) => {
   const input = data;
+  return {
+  }
       region: {
-          name: 'Africa';
+          name: 'Africa',
           avgAge,
           avgDailyIncomeInUsd,
           avgDailyIncomePopulation
-      };
-    periodType,
+      }
+    periodType: 'days',
     reportedCases,
     timeToElapse,
     population,
     totalHospitalBeds
  }
   const impact = {};
-  const severeImpact = {};
+  const severeImpact = {}
 
   // challenge 1
   impact.currentlyInfected = Math.trunc(reportedCases * 10);
