@@ -1,19 +1,17 @@
 const covid19ImpactEstimator = (data) => {
-  const input = data;
-  return {
-  }
+  const {
       region: {
-          name: 'Africa',
           avgAge,
           avgDailyIncomeInUsd,
           avgDailyIncomePopulation
-      }
-    periodType: 'days',
-    reportedCases,
+      },
+    periodType,
+    reportedCases, 
     timeToElapse,
     population,
     totalHospitalBeds
- }
+} = data;
+
   const impact = {};
   const severeImpact = {}
 
@@ -41,5 +39,6 @@ const covid19ImpactEstimator = (data) => {
   impact.infectionsByRequestedTime = impact.currentlyInfected * 2 ** timeFactor;
   severeImpact.infectionsByRequestedTime =
     severeImpact.currentlyInfected * 2 ** timeFactor;
-}
+};
+};
 export default covid19ImpactEstimator;
